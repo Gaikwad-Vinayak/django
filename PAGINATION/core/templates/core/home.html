@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>home</h1>
+    {% for dt in data %}
+    <h1>{{dt.title}}</h1>
+    <span>{{dt.data}}</span>
+   <p> {{dt.date}}</p>
+    {% endfor %}
+
+    {% if data.has_next %}
+    <a href="?page={{data.next_page_number}}">next</a>
+    {% endif %}
+    {% if data.has_previous %}
+    <a href="?page={{data.previous_page_number}}">previous</a>
+    {% endif %}
+</body>
+</html>

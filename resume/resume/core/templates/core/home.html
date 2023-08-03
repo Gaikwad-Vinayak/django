@@ -1,0 +1,26 @@
+
+{% extends 'core/base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% load static %}
+{% block content %}
+<div class="text-white mt-3">
+    <div class="text-center">
+        <img src="{% static 'core/images/pic.jpg' %}" class="img-thumbnail" alt="" height="100px" width="150px">
+    
+    </div>
+ <div>
+        <h2 class="mt-2 font">Hello;</h2>
+    </div>
+    <div class="mx-2 p-2">
+        <p style="text-indent:100px; line-height: 25px;"><b class="font">Hello,</b> i am
+            <b class="text-warning text-center">Vinayak gaikwad</b>
+            messages may be sent over a cellular network, or may also be sent via an Internet connection. The term originally referred to messages sent using the Short Message Service (SMS). It has grown beyond alphanumeric text to include multimedia messages using the Multimedia Messaging Service (MMS) containing digital images, videos, and sound content, <b class="text-warning">gaikwadvinayak924@gmail.com</b> as well as ideograms known as emoji (happy faces, sad faces, and other icons), and instant messenger applications (usually the term is used when on mobile devices). Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues. In the 2010s, the sending of short informal messages became an accepted part of many cultures, as happened earlier with emailing. This makes texting a quick and easy way to communicate with friends, family and colleagues, including in contexts where a call would be impolite or inappropriate (e.g., calling very late at night or when one knows the other person is busy with family or work activities). Like e-mail and voicemail and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with aut…
+        </p>
+    </div>
+<div class="text-center">
+     <a href="{% url 'contact' %}" class="btn btn-outline-danger mx-2">contact</a>
+    <button type="button" class="btn btn-outline-warning mx-2">Warning</button>
+</div>
+</div>
+{% endblock content %}

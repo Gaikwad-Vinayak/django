@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+         <div class="container pt-2">
+ <div class="row">
+                {% for m in mobiles %}
+              <div class="col-12 col-sm-4 shadow-lg p-3 mb- bg-body rounded m-2"> <img src="{{m.product_img.url}}" alt="" height="200px">
+                <span class="fw-bold">{{m.title}}</span><br> 
+    <h4>Rs. {{m.selling_price}} <small class="fw-light text-decoration-line-through">{{m.discounted_price}}</small></h4> <br>
+ 
+              </div>
+              {% endfor %}
+
+            </div>
+
+{% endblock main-content %}
